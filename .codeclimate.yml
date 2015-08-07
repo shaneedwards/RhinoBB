@@ -1,8 +1,21 @@
-# Save as .codeclimate.yml (note leading .) in project root directory
-languages:
-  Ruby: false
-  JavaScript: true
-  PHP: true
-  Python: false
-# exclude_paths:
-# - "foo/bar.rb"
+engines:
+  rubocop:
+    enabled: true
+  golint:
+    enabled: true
+  gofmt:
+    enabled: true
+  eslint:
+    enabled: true
+  csslint:
+    enabled: true
+ratings:
+   paths:
+   - app/**
+   - lib/**
+   - "**.rb"
+   - "**.go"
+exclude_paths:
+- spec/**/*
+- vendor/**/*
+- tests/**/*
