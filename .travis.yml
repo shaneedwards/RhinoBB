@@ -16,3 +16,10 @@ script: phpunit
 
 notifications:
   slack: edwardsfam:PHGiYcg7b2Eq1dkABD3jDSSz
+
+addons:
+  code_climage:
+    repo_token: f6227c9cb54fab59db37bd99a34ae7c3fc5eef4cb8a5dc313d73dfbab0319934
+
+after_script:
+  - vendor/bin/test-reporter
